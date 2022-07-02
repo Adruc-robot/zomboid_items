@@ -99,8 +99,10 @@ function gather_unique(selector) {
     let items = document.querySelectorAll(selector)
     let theString = ''
     items.forEach(item => {
+        //console.log(item.parentElement.parentElement)
         let value = item.querySelectorAll('.valuePair')[0].innerText
-        if (!theString.includes(value)) {
+        //console.log(value)
+        if (!theString.includes(value) && !item.parentElement.parentElement.classList.contains('noShow')) {
             theString = theString + value + '|'
         }
     })
