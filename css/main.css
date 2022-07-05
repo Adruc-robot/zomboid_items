@@ -266,3 +266,75 @@ textarea {
   display: none;
 }
 /*site styles end*/
+.parts {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 9vh 9vh 9vh 9vh 9vh 9vh 9vh 9vh
+  9vh;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.UpperTorso { grid-area: 3 / 2 / 4 / 3; }
+
+.Neck { grid-area: 2 / 2 / 3 / 3; }
+
+.Head { grid-area: 1 / 2 / 2 / 3; }
+
+.LeftUpperArm { grid-area: 3 / 1 / 4 / 2; }
+
+.RightUpperArm { grid-area: 3 / 3 / 4 / 4; }
+
+.LowerTorso { grid-area: 4 / 2 / 5 / 3; }
+
+.LeftForearm { grid-area: 4 / 1 / 5 / 2; }
+
+.RightForearm { grid-area: 4 / 3 / 5 / 4; }
+
+.LeftHand { grid-area: 5 / 1 / 6 / 2; }
+
+.Groin { grid-area: 5 / 2 / 6 / 3; }
+
+.RightHand { grid-area: 5 / 3 / 6 / 4; }
+
+.LeftThigh { grid-area: 6 / 1 / 7 / 2; }
+
+.RightThigh { grid-area: 6 / 3 / 7 / 4; }
+
+.LeftShin { grid-area: 7 / 1 / 8 / 2; }
+
+.RightShin { grid-area: 7 / 3 / 8 / 4; }
+
+.LeftFoot { grid-area: 8 / 1 / 9 / 2; }
+
+.RightFoot { grid-area: 8 / 3 / 9 / 4; }
+.Wearing { grid-area: 9 / 1 / 10 / 4; }
+.displayContainer {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 90vh;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "LeftSide RightSide";
+}
+
+.LeftSide { 
+  grid-area: LeftSide; 
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+.RightSide { grid-area: RightSide; }
+.bite::before {
+  content: "Bite: ";
+}
+.scratch::before {
+  content: "Scratch: ";
+}
+.bullet::before {
+  content: "Bullet: ";
+}
+.LeftHand, .RightHand, .LeftForearm, .RightForearm, .UpperTorso, .LowerTorso, .Head, .Neck, .Groin, .LeftThigh, .RightThigh, .LeftHand, .RightHand, .LeftFoot, .RightFoot, .LeftShin, .RightShin, .LeftUpperArm, .RightUpperArm {
+  border-style: solid;
+  padding: 0.5rem;
+
+}
